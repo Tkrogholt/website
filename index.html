@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="loginServer">
+    <style>
+body {
+    background-color: #33c752;
+}
+
+h1 {
+    color: red;
+    text-align: center;
+}
+
+p {
+    font-family: "Times New Roman";
+    font-size: 20px;
+}
+#span1 {
+    font-family: "Times New Roman";
+    font-size: 20px;
+    color: yellow;
+}
+</style>
+    <head>
+        <title>Login Server</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/libs/angular.js/angular.js"></script>
+        <script src="js/libs/angular.js/angular-route.js"></script>
+        <script src="app.js"></script>
+        <script src="js/login/controllers.js"></script>
+        <script src="js/filters/filters.js"></script>
+    </head>
+    <body>
+    <!-- Et forsøg på at lave en menu! -->
+    <button ng-click="count = count + 2" ng-init="count=0" style="background-color:#990033;color:red;margin-left:20px;">Increment Count</button>
+    <button><a href="#/customers">Go home</a></button>
+    <button ng-click="go('#/customers/2')" style="margin-left:20px;"><a href="#/customers/2">Customer 2</a></button>
+    <h3>Kommer det her på alle sider? Count: {{count}}</h3> <br>
+        <h1>{{ $event }}</h1>
+        <h2>Svar: Jaaaa</h2>
+    <!-- Slut på forsøget! -->
+        <div ng-view></div>
+    </body>
+    
+</html>
